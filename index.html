@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow With Kibo - Tu Bienestar a tu Ritmo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efecto Glassmorphism personalizado según directrices de diseño */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-[#1a1c29] via-[#2d2942] to-[#1b233a] text-gray-100 min-h-screen selection:bg-purple-500 selection:text-white">
+
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center transition-all">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-400 to-purple-500 flex items-center justify-center font-bold text-white shadow-lg"><img src="img/kibo.png" alt="Kibo" class="w-6 h-6"></div>
+            <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-emerald-400 to-purple-300 bg-clip-text text-transparent">Flow With Kibo</span>
+        </div>
+        <a href="#download" class="bg-emerald-500/20 hover:bg-emerald-500 text-emerald-300 hover:text-white font-medium px-5 py-2.5 rounded-full border border-emerald-500/30 transition-all text-sm tracking-wide min-w-[44px] min-h-[44px] flex items-center justify-center">
+            Descargar APK
+        </a>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-24 grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 space-y-6 text-left">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
+                ¿Harto de que una app te haga sentir <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">culpable</span>?
+            </h1>
+            <p class="text-lg text-gray-300 max-w-2xl font-normal leading-relaxed">
+                Descubre <strong>Flow With Kibo</strong>. La primera plataforma de salud gamificada que transforma los "datos fríos" en acompañamiento emocional. Registra tu nutrición y deporte a tu ritmo, sin presiones estéticas ni números rojos.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#download" class="bg-gradient-to-r from-emerald-400 to-teal-500 hover:from-emerald-500 hover:to-teal-600 text-slate-900 font-semibold px-8 py-3.5 rounded-full text-center shadow-lg shadow-emerald-500/20 transition-all transform hover:-translate-y-0.5">
+                    Empezar mi flujo - Gratis
+                </a>
+                <a href="#features" class="glass-card hover:bg-white/15 text-white font-medium px-8 py-3.5 rounded-full text-center transition-all border border-white/20">
+                    Saber más
+                </a>
+            </div>
+        </div>
+        <div class="md:col-span-5 flex justify-center">
+            <div class="glass-card w-72 h-72 sm:w-80 sm:h-80 rounded-[2.5rem] flex flex-col items-center justify-center p-8 text-center relative shadow-2xl group overflow-hidden">
+                <div class="absolute -inset-10 bg-gradient-to-tr from-purple-500/20 to-emerald-500/20 rounded-full blur-3xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                <div class="w-40 h-40 rounded-full bg-gradient-to-b from-purple-300/30 to-purple-500/40 animate-pulse flex items-center justify-center text-6xl shadow-inner relative z-10">
+                    <img src="img/kibo-exercise.png" alt="Kibo" class="w-100 h-100 object-contain relative z-10">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="max-w-7xl mx-auto px-6 py-20 border-t border-white/5">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Un ecosistema diseñado para tu salud mental</h2>
+            <p class="mt-4 text-gray-400 text-lg">Huyendo de las métricas rígidas y punitivas que generan frustración.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl space-y-4 hover:border-white/20 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-2xl text-emerald-400 group-hover:scale-110 transition-transform">🤖</div>
+                <h3 class="text-xl font-semibold text-white">Asistente Inteligente</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Dile a Kibo qué te queda en la nevera y te sugerirá una receta rápida. Si estás cansado, la IA adaptará tu rutina en tiempo real sustituyendo la fuerza por estiramientos. Flexibilidad pura.
+                </p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl space-y-4 hover:border-white/20 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center text-2xl text-purple-400 group-hover:scale-110 transition-transform">✨</div>
+                <h3 class="text-xl font-semibold text-white">Gamificación con Propósito</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Tu progreso no se mide en centímetros ni en básculas normativas. Al cumplir tus metas o registrar tus emociones ganas monedas para personalizar el estilo, accesorios y poses de tu avatar.
+                </p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl space-y-4 hover:border-white/20 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-2xl text-blue-400 group-hover:scale-110 transition-transform">🛡️</div>
+                <h3 class="text-xl font-semibold text-white">Modo Zen Adaptable</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Tú eliges las reglas. Activa el Modo Analítico si buscas rendimiento específico, o el Modo Zen para invisibilizar los números matemáticos en favor de un registro 100% cualitativo y libre de culpa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="max-w-5xl mx-auto px-6 py-16 mb-24">
+        <div class="glass-card rounded-[3rem] p-8 sm:p-12 md:p-16 text-center relative overflow-hidden shadow-2xl border border-white/10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -ml-20 -mb-20"></div>
+
+            <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+                <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full border border-emerald-500/20">
+                    Exclusivo Android • APK Directo
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Instala Flow With Kibo en tu dispositivo</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Al tratarse de un despliegue controlado de testing y desarrollo independiente, puedes descargar el archivo APK seguro directamente en tu terminal o escanear el código QR desde tu móvil Android.
+                </p>
+
+                <div class="pt-6 flex flex-col md:flex-row items-center justify-center gap-12">
+                    <div class="bg-white p-4 rounded-2xl shadow-xl inline-block group hover:rotate-1 transition-transform duration-300">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160&data=TU_URL_DE_DESCARGA_AQUI&color=1a1c29" 
+                             alt="Escanear Código QR para descargar APK" 
+                             class="w-40 h-40" />
+                        <span class="text-[10px] text-slate-500 font-medium mt-2 block uppercase tracking-wider">Escanear para instalar</span>
+                    </div>
+
+                    <div class="flex flex-col items-center md:items-start space-y-4 text-center md:text-left max-w-xs">
+                        <div class="text-emerald-400 flex items-center space-x-2 font-medium text-sm">
+                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span>Última build estable disponible</span>
+                        </div>
+                        <h4 class="text-white font-semibold text-lg">¿Prefieres descargarlo directamente?</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Pulsa el botón inferior desde tu teléfono para iniciar la descarga del instalador `.apk`.
+                        </p>
+                        <a href="TU_URL_DE_DESCARGA_AQUI" download class="w-full bg-white hover:bg-gray-100 text-slate-900 font-bold px-6 py-3 rounded-full flex items-center justify-center space-x-2 transition-all shadow-md min-w-[44px] min-h-[44px]">
+                            <span>Descargar archivo .APK</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/5 py-8 text-center text-xs text-gray-500 max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Flow With Kibo. Aida Soto Palma.</p>
+        <div class="flex space-x-6">
+            <span class="hover:text-gray-400 flex items-center space-x-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-400 inline-block"></span>
+                <span>WCAG 2.1 AA Compliant</span>
+            </span>
+            <span class="hover:text-gray-400">TFM Prototipado</span>
+        </div>
+    </footer>
+
+</body>
+</html>
