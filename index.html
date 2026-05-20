@@ -10,8 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            min-height: 100% !important;
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to top right, #eae7f8, #e3eeff, #f3e8f5) !important;
+            background-attachment: fixed !important;
+            background-size: cover !important;
         }
 
         /* Efecto Glassmorphism puro para que fusione con el nuevo fondo degradado */
@@ -40,7 +45,7 @@
 </head>
 
 <body
-    class="bg-gradient-to-tr from-[#eae7f8] via-[#e3eeff] to-[#f3e8f5] text-slate-800 min-h-screen selection:bg-purple-400 selection:text-white antialiased relative overflow-x-hidden">
+    class="text-slate-800 min-h-screen selection:bg-purple-400 selection:text-white antialiased relative overflow-x-hidden">
 
     <div
         class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-[120px] pointer-events-none">
@@ -138,7 +143,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-slate-900">Asistente Inteligente</h3>
                 <p class="text-slate-600 text-sm leading-relaxed font-normal">
-                    La IA se adapta a tus necesidades reales. Dile qué tienes en la nevera y te sugerirá una receta
+                    Kibo se adapta a tus necesidades reales. Dile qué tienes en la nevera y te sugerirá una receta
                     rápida. Si reportas agotamiento, reajustará tus rutinas para evitar el sentimiento de culpa.
                 </p>
             </div>
