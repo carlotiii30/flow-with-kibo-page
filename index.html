@@ -94,7 +94,7 @@
                 Funciona</a>
             <a href="#download"
                 class="bg-purple-600/10 hover:bg-purple-600 text-purple-700 hover:text-white font-semibold px-5 py-2.5 rounded-full border border-purple-600/20 transition-all text-sm tracking-wide flex items-center justify-center min-h-[44px]">
-                Instalar APK
+                Ver Prototipo
             </a>
         </div>
     </nav>
@@ -285,47 +285,43 @@
             <div class="relative z-10 max-w-3xl mx-auto space-y-8">
                 <span id="badge-os"
                     class="bg-purple-600/10 text-purple-700 text-xs font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border border-purple-600/20 inline-block">
-                    Exclusivo Android • Archivo APK Seguro
+                    Prototipo interactivo en Figma
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Obtén la última versión del
-                    prototipo</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Explora el prototipo
+                    interactivo</h2>
                 <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
-                    Al tratarse de una fase controlada de testing funcional independiente para la validación del
-                    proyecto, puedes descargar directamente la compilación en formato `.apk` o escanear el código QR
-                    interactivo.
+                    Accede directamente al flujo completo en Figma desde el botón o escaneando el código QR.
                 </p>
 
                 <div class="pt-4 flex flex-col md:flex-row items-center justify-center gap-12">
                     <div id="qr-container"
                         class="bg-white p-4 rounded-3xl shadow-lg inline-block transition-transform duration-300 hover:scale-105 border border-slate-100">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160&data=https://github.com/carlotiii30/flow-with-kibo-page/releases/download/v1.0.0-beta/app-arm64-v8a-release.apk&color=131520"
-                            alt="Código QR para la descarga del APK" class="w-40 h-40 select-none rounded-xl" />
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160&data=https://www.figma.com/proto/eKLxmAtitz5UHnMLPsiW08/Sin-t%C3%ADtulo?node-id=92-861&starting-point-node-id=92%3A861&t=imYNumt3RSj8q48k-1&color=131520"
+                            alt="Código QR para abrir el prototipo en Figma" class="w-40 h-40 select-none rounded-xl" />
                         <span class="text-[10px] text-slate-500 font-bold mt-2 block uppercase tracking-wider">Escanear
-                            para instalar</span>
+                            para abrir</span>
                     </div>
 
                     <div class="flex flex-col items-center md:items-start space-y-4 text-center md:text-left max-w-xs">
                         <div id="status-container"
                             class="text-emerald-600 flex items-center space-x-2 font-semibold text-sm">
                             <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            <span>Build estable de evaluación (arm64-v8a)</span>
+                            <span>Acceso disponible al prototipo</span>
                         </div>
-                        <h4 id="download-title" class="text-slate-900 font-bold text-lg">¿Instalando desde tu terminal?
+                        <h4 id="download-title" class="text-slate-900 font-bold text-lg">¿Quieres verlo ahora?
                         </h4>
                         <p id="download-description" class="text-slate-600 text-xs leading-relaxed">
-                            Pulsa el botón de descarga directa para bajar el instalador ejecutable de 21.6MB de forma
-                            inmediata.
+                            Pulsa el botón para abrir la experiencia interactiva en Figma al instante.
                         </p>
 
-                        <a href="https://github.com/carlotiii30/flow-with-kibo-page/releases/download/v1.0.0-beta/app-arm64-v8a-release.apk"
+                        <a href="https://www.figma.com/proto/eKLxmAtitz5UHnMLPsiW08/Sin-t%C3%ADtulo?node-id=92-861&starting-point-node-id=92%3A861&t=imYNumt3RSj8q48k-1"
                             class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3.5 rounded-full flex items-center justify-center space-x-2 transition-all shadow-md hover:shadow-purple-600/20 min-h-[44px]">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    d="M5 12h14m0 0l-5-5m5 5l-5 5" />
                             </svg>
-                            <span>Descargar archivo .APK</span>
+                            <span>Ver Prototipo en Figma</span>
                         </a>
-                        <div id="mobile-download-message" class="w-full"></div>
                     </div>
                 </div>
             </div>
@@ -346,60 +342,5 @@
     </footer>
 
 </body>
-
-<script>
-    function getMobileOS() {
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        if (/android/i.test(userAgent)) {
-            return "Android";
-        }
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            return "iOS";
-        }
-        return "Otro";
-    }
-
-    window.addEventListener('DOMContentLoaded', function () {
-        const os = getMobileOS();
-        const downloadLinks = document.querySelectorAll('a[href$=".apk"]');
-        const messageDiv = document.getElementById('mobile-download-message');
-        const qrContainer = document.getElementById('qr-container');
-        const statusContainer = document.getElementById('status-container');
-        const badgeOs = document.getElementById('badge-os');
-        const downloadTitle = document.getElementById('download-title');
-        const downloadDescription = document.getElementById('download-description');
-
-        if (os === "Android") {
-            downloadLinks.forEach(link => link.style.display = '');
-            if (messageDiv) {
-                messageDiv.innerHTML = '<span class="text-emerald-700 font-semibold bg-emerald-500/10 border border-emerald-500/20 px-3 py-2 rounded-xl text-xs block text-center mt-2">✨ Compatible con tu dispositivo Android. El archivo se guardará en tu carpeta de Descargas.</span>';
-            }
-        } else if (os === "iOS") {
-            // Ocultar todos los accesos al APK (Navbar y botón de sección)
-            downloadLinks.forEach(link => link.style.display = 'none');
-
-            // Ocultar el QR en iPhone ya que no les sirve de nada escanearlo
-            if (qrContainer) qrContainer.style.display = 'none';
-
-            // Adaptar la interfaz para dar feedback limpio en iOS
-            if (badgeOs) {
-                badgeOs.innerText = "Próximamente en iOS";
-                badgeOs.className = badgeOs.className.replace('text-purple-700', 'text-amber-700').replace('bg-purple-600/10', 'bg-amber-600/10').replace('border-purple-600/20', 'border-amber-600/20');
-            }
-            if (statusContainer) {
-                statusContainer.innerHTML = '<span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span><span class="text-amber-700">Fase de desarrollo Apple Ecosystem</span>';
-            }
-            if (downloadTitle) downloadTitle.innerText = "Compatibilidad de la versión";
-            if (downloadDescription) downloadDescription.innerText = "Actualmente el prototipo interactivo funcional está compilado exclusivamente para su validación en terminales Android.";
-
-            if (messageDiv) {
-                messageDiv.innerHTML = '<span class="text-amber-700 font-semibold bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-xl text-xs block text-center mt-2">⚠️ Los archivos APK no se pueden instalar en iOS. Usa un dispositivo Android para probar este prototipo.</span>';
-            }
-        } else {
-            downloadLinks.forEach(link => link.style.display = '');
-            if (messageDiv) messageDiv.innerHTML = '';
-        }
-    });
-</script>
 
 </html>
